@@ -9,14 +9,20 @@ For every midi device connected to your device it will open a channel and listen
 * Android Bluetooth support
 
 
-## Example
+
+## Example project
 
     ./example
 
-## 
+
 ## How to
 
-Add to ```project.godot```
+Compile Godot with ```./midiIn``` in the godot ```module``` dir.
+
+Read up on how to compile for Android here http://docs.godotengine.org/en/3.0/development/compiling/compiling_for_android.html
+
+
+In your project add this to your ```project.godot```
 
     [android]
     modules="org/godotengine/godot/GodotMidiIn"
@@ -70,8 +76,8 @@ func _device_packet_received_on_port(id, port, timestamp, packet):
 	# First byte is a status byte.
 	# https://users.cs.cf.ac.uk/Dave.Marshall/Multimedia/node158.html
 	var status = mPacket.pop_front()
-    # Here is a simple example how to separate the packets, only tested with regular piano keys
-    while status:
+	# Here is a simple example how to separate the packets, only tested with regular piano keys
+	while status:
 		if status & 0xF0 == 0xF0:
 			# Ignore all system messages
 			status = mPacket.pop_front()
