@@ -18,7 +18,9 @@ public class GodotMidiIn extends Godot.SingletonBase implements GodotMidiInImpl.
     }
 
     public void onMainDestroy() {
-        midi.onDestroy();
+        if (midi != null) {
+            midi.onDestroy();
+        }
     }
 
     @Override

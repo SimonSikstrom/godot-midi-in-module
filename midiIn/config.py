@@ -6,6 +6,7 @@ def configure(env):
 		module_env = env.Clone()
 		module_env.android_add_java_dir("android")
 		module_env.android_add_to_manifest("android/AndroidManifestChunk.xml")
+		module_env.disable_module()
 	
 	if env['platform'] == "iphone" or env['platform'] == "osx":
 		module_env = env.Clone()
