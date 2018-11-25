@@ -1,12 +1,15 @@
-# Module with Midi input for Android, iOS and MacOS in GODOT engine
+# CURRENTLY ONLY WORKS WITH GODOT VERSION >=3.1
 
-Build this module to listen to midi packages on your device.
+# Module with Midi input for Android, iOS and MacOS in the [GODOT Engine](https://github.com/godotengine/godot)
+
+Build GODOT with this module to add a midi listener in your device.
 
 For every midi device connected to your device it will open a channel and listen to all incoming messges. 
 
 ### TODO
 * Test on iOS
 * Android Bluetooth support?
+* Proper README.md
 
 ## Example project
 
