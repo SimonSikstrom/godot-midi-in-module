@@ -1,3 +1,7 @@
+*.pyc
+*.o
+*.d
+
 # Godot-specific ignores
 .import/
 export.cfg

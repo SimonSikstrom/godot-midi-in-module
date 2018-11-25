@@ -1,2 +1,11 @@
 
 Import('env')
+
+if (env["platform"] == "iphone" or env["platform"] == "osx"):
+    env.add_source_files(env.modules_sources,
+    [
+        'register_types.cpp',
+        'apple/src/midiIn.mm',
+        'apple/src/MidiInHandler.mm'
+    ]
+    )
