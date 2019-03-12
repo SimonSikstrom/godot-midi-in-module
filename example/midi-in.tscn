@@ -2,6 +2,11 @@
 
 [ext_resource path="res://midi-in.gd" type="Script" id=1]
 
-[node name="midi-in" type="Node"]
+[node name="midi-in" type="MidiIn"]
 script = ExtResource( 1 )
 
+[connection signal="_device_added" from="." to="." method="_on_midiin__device_added"]
+[connection signal="_device_connected_on_port" from="." to="." method="_on_midiin__device_connected_on_port"]
+[connection signal="_device_packet_received_on_port" from="." to="." method="_on_midiin__device_packet_received_on_port"]
+[connection signal="_device_removed" from="." to="." method="_on_midiin__device_removed"]
+[connection signal="_midi_not_available" from="." to="." method="_on_midiin__midi_not_available"]
