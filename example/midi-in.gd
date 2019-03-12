@@ -1,7 +1,5 @@
 extends Node
 
-var midi = null
-
 signal midi_key_down(key, velocity)
 signal midi_key_up(key)
 
