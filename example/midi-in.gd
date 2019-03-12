@@ -5,29 +5,20 @@ var midi = null
 signal midi_key_down(key, velocity)
 signal midi_key_up(key)
 
-func _ready():
-	if(Engine.has_singleton("MidiIn")):
-		midi = Engine.get_singleton("MidiIn")
-		midi.init(get_instance_id())
-		if midi == null:
-			_midi_not_available()
-	else:
-		_midi_not_available()
 
-func _midi_not_available():
+func _on_midiin__midi_not_available():
 	print("_midi_not_available")
 
-func _device_added(id, name):
+func _on_midiin__device_added(id, name):
 	print("_device_added ", id, " ", name)
 
-func _device_connected_on_port(id, port):
+func _on_midiin__device_connected_on_port(id, port):
 	print("_device_connected_on_port ", id, " ", port)
 
-func _device_removed(id):
+func _on_midiin__device_removed(id):
 	print("_device_removed ", id)
 
-func _device_packet_received_on_port(id, port, timestamp, packet):
-	
+func _on_midiin__device_packet_received_on_port(id, port, time, packet):
 	# Create mutable packet
 	var mPacket = Array(packet)
 	

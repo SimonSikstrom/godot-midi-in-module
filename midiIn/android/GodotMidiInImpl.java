@@ -19,11 +19,11 @@ public class GodotMidiInImpl implements MidiManager.OnDeviceOpenedListener {
     private final Listener listener;
 
     private enum Signals {
-        DEVICE_ADDED("_device_added"),
-        DEVICE_REMOVED("_device_removed"),
-        DEVICE_CONNECTED_ON_PORT("_device_connected_on_port"),
-        DEVICE_PACKET_RECEIVED_ON_PORT("_device_packet_received_on_port"),
-        MIDI_NOT_AVAILABLE("_midi_not_available");
+        DEVICE_ADDED("_device_added_native"),
+        DEVICE_REMOVED("_device_removed_native"),
+        DEVICE_CONNECTED_ON_PORT("_device_connected_on_port_native"),
+        DEVICE_PACKET_RECEIVED_ON_PORT("_device_packet_received_on_port_native"),
+        MIDI_NOT_AVAILABLE("_midi_not_available_native");
 
         private final String name;
 

@@ -1,5 +1,5 @@
-#ifndef GODOT_MIDIIN_H
-#define GODOT_MIDIIN_H
+#ifndef GODOT_MidiInGodot_H
+#define GODOT_MidiInGodot_H
 
 #include <core/reference.h>
 
@@ -11,18 +11,20 @@
 typedef void MidiInHandler;
 #endif
 
-class MidiIn : public Reference, public MidiInCppListener {
+class MidiInGodot : public Reference, public MidiInCppListener {
 private:
-    GDCLASS(MidiIn, Reference);
+    GDCLASS(MidiInGodot, Reference);
     MidiInHandler *handler;
     ObjectID instanceId;
+
+    void release_handler();
 
 protected:
     static void _bind_methods();
 
 public:
-    MidiIn();
-    ~MidiIn();
+    MidiInGodot();
+    ~MidiInGodot();
     void init(ObjectID instance_id);
     void _device_added(int32_t id, std::string name);
     void _device_removed(int32_t id);
@@ -31,4 +33,4 @@ public:
     void _midi_not_available();
 };
 
-#endif /* GODOT_MIDIIN_H */
+#endif /* GODOT_MidiInGodot_H */

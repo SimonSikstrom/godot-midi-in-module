@@ -1,11 +1,13 @@
 
 Import('env')
+Import('env_modules')
+
+env_midiIn = env_modules.Clone()
+env_midiIn.add_source_files(env.modules_sources, "*.cpp")
 
 if (env["platform"] == "iphone" or env["platform"] == "osx"):
-    env.add_source_files(env.modules_sources,
+    env_midiIn.add_source_files(env.modules_sources,
     [
-        'register_types.cpp',
-        'apple/src/midiIn.mm',
+        'apple/src/MidiInGodot.mm',
         'apple/src/MidiInHandler.mm'
-    ]
-    )
+    ])
