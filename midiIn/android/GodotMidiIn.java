@@ -33,7 +33,7 @@ public class GodotMidiIn extends Godot.SingletonBase implements GodotMidiInImpl.
     }
 
     public GodotMidiIn(Activity activity) {
-        registerClass("MidiIn", new String[]{"init"});
+        registerClass("MidiInGodot", new String[]{"init"});
         this.activity = activity;
     }
 }
