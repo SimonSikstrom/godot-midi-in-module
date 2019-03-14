@@ -1,4 +1,4 @@
-def can_build(plat):
+def can_build(env, plat):
 	return plat == "android" or plat == "iphone" or plat == "osx"
 
 def configure(env):
