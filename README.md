@@ -1,6 +1,4 @@
-# CURRENTLY ONLY WORKS WITH GODOT VERSION >=3.1
-
-# A [GODOT Engine](https://github.com/godotengine/godot) MIDI In Module for Android & iOS
+# A [GODOT Engine >=3.1](https://github.com/godotengine/godot) MIDI In Module for Android & iOS
 ## (+ MacOS for testing)
 
 This GODOT module is primarliy for iOS and Android devices to make it easier to listen on midi in signals from your smartphone.
