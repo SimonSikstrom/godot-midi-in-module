@@ -19,7 +19,7 @@ For every midi device you connect to the device you will get the callbacks you n
 
 1. Compile Godot with ```./midiIn``` in the godot ```module``` dir.
 
-	- Read up on how to compile modules for Android here http://docs.godotengine.org/en/3.0/development/compiling/compiling_for_android.html
+	- Read up on how to compile modules for Android here http://docs.godotengine.org/en/3.1/development/compiling/compiling_for_android.html
 	
 
 1. Open GODOT
